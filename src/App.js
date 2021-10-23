@@ -10,7 +10,7 @@ function App() {
   const searchForecastWeather = () => {
     setIsLoading(true);
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=8e807a01a05843a389c222700212010&q=${city}&lang=pt`
+      `${process.env.REACT_APP_BASE_URL}current.json?key=${process.env.REACT_APP_KEY}&q=${city}&lang=pt`
     )
       .then((response) => {
         if (response.status === 200) {
