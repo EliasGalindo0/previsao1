@@ -25,7 +25,6 @@ function App() {
         setWeatherForecast(data);
         setIsLoading(false);
         setCity(" ");
-        console.log(data);
       });
   };
 
